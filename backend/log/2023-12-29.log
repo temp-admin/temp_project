@@ -1,0 +1,8 @@
+[2023-12-29T11:34:45.730Z]: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2023-12-29T11:34:53.163Z]: Error: Cannot enqueue Query after fatal error.
+[2023-12-29T11:35:07.191Z]: Error: Cannot enqueue Query after fatal error.
+[2023-12-29T11:36:48.625Z]: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2023-12-29T11:49:57.237Z]: Error: ER_DBACCESS_DENIED_ERROR: Access denied for user 'admin_user'@'localhost' to database 'smart_parent'
+[2023-12-29T11:53:19.216Z]: null
+[2023-12-29T11:57:41.102Z]: null
+[2023-12-29T11:58:02.871Z]: null
