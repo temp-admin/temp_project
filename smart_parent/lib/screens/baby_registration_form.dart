@@ -30,7 +30,6 @@ class _BabyRegistrationFormState extends State<BabyRegistrationForm> {
       firstDate: DateTime(2000),
       lastDate: DateTime.now(),
     );
-
     if (picked != null) {
       setState(() {
         _birthdate = picked;
