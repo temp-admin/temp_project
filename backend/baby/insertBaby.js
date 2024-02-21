@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 const jwt = require('jsonwebtoken');
-const { logError } = require('./utils');
+const { logError } = require('../utils');
 
 const connection = mysql.createConnection({
   connectionLimit: 10,
@@ -13,16 +13,17 @@ const connection = mysql.createConnection({
 // 아기 정보를 DB에 삽입하는 함수
 const addBabyInfo = (userId, babyInfo, callback) => {
   // 아기 정보 삽입
-  const insertBabyQuery = 'INSERT INTO babies (name, gender, birthdate, child_order) VALUES (?, ?, ?, ?)';
+  const insertBabyQuery = 'INSERT INTO babies (name, gender, birthdate, child_order, height, weight ) VALUES (?, ?, ?, ?, ?, ?)';
   connection.query(
     insertBabyQuery,
-    [babyInfo.name, babyInfo.gender, babyInfo.birthdate, babyInfo.child_order],
+    [babyInfo.name, babyInfo.gender, babyInfo.birthdate, babyInfo.child_order, babyInfo.height, babyInfo.weight ],
     (err, results) => {
       if (err) {
         logError(err);
         return callback(err);
       }
       logError(results);
+      
       // 삽입된 아기의 ID 가져오기
       const babyId = results.insertId;
 
